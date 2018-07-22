@@ -1,0 +1,13 @@
+[Unit]
+Description=Stream Camera Daemon
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/stcam/code
+ExecStart=/bin/bash execute.sh
+RemainAfterExit=Yes
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
